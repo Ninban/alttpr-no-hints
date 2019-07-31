@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "ALTTPR No Hints",
+  "version": "1.1",
+
+  "description": "Adds a button to ALTTPR website to generate hintsless seeds",
+
+  "permissions": [
+    "https://gist.githubusercontent.com/tcprescott/d5de27c773679eb7205688b6e92bfbbf/raw/a64235ed990fa1ec24a6248bb3c6a746c406f603/no_hints.json"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.alttpr.com/*/randomizer"],
+      "js": ["nohints.js"]
+    }
+  ]
+}
